@@ -1,4 +1,4 @@
-我在[Elasticsearch安装与配置](article/环境安装/Elasticsearch安装与配置.md)这篇文档已经把Kibana下载好并且拷贝到服务器里了，这里就直接不演示下载了。
+我在[Elasticsearch安装与配置](./Elasticsearch安装与配置.md)这篇文档已经把Kibana下载好并且拷贝到服务器里了，这里就直接不演示下载了。
 
 ### 1.解压缩
 
