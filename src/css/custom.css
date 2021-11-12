@@ -1,0 +1,225 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+/* #0366d6 */
+:root {
+  /* --ifm-color-primary: #203a43;
+  --ifm-color-primary-dark: #1d343c;
+  --ifm-color-primary-darker: #1b3139;
+  --ifm-color-primary-darkest: #16292f;
+  --ifm-color-primary-light: #23404a;
+  --ifm-color-primary-lighter: #25434d;
+  --ifm-color-primary-lightest: #2a4b57; */
+  --ifm-color-primary: #0366d6;
+  --ifm-color-primary-dark: #035cc1;
+  --ifm-color-primary-darker: #0357b6;
+  --ifm-color-primary-darkest: #024796;
+  --ifm-color-primary-light: #0370eb;
+  --ifm-color-primary-lighter: #0375f6;
+  --ifm-color-primary-lightest: #1e86fc;
+
+  --ifm-code-font-size: 95%;
+
+  --ifm-font-family-base: "Nunito Sans", "Iran Sans";
+  --ifm-heading-font-family: "Nunito Sans", "Iran Sans";
+
+  /* --ifm-footer-padding-horizontal: calc(var(--ifm-footer-padding-horizontal) / 2*3); */
+}
+
+button {
+  font-family: "Nunito Sans", "Iran Sans";
+}
+
+.footer {
+  background: var(--ifm-navbar-background-color);
+  color: #a4a4a4;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  /* padding: calc(var(--ifm-footer-padding-vertical) * 1 / 2); */
+  padding: calc(var(--ifm-footer-padding-vertical) * 1 / 2)
+  var(--ifm-footer-padding-horizontal);
+  /* box-shadow: 0 -1px 2px 0px rgba(0, 0, 0, 0.1); */
+  border-top: 1px solid var(--ifm-toc-border-color);
+}
+
+/* html,
+body {
+  font-family: "Nunito Sans", "Iran Sans";
+  font-weight: 400;
+  color: var(--ifm-color-primary);
+} */
+
+/* h1 {
+  font-size: 2.4rem !important;
+} */
+
+/* h2 {
+  font-size: 1.9rem !important;
+} */
+
+/* h3 {
+  font-size: 1.3rem !important;
+} */
+
+p {
+  text-align: justify;
+}
+
+img {
+  border-radius: var(--ifm-global-radius);
+}
+
+/* .docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+} */
+
+/* Footer */
+
+/* .footer__logo {
+  max-width: 2rem;
+} */
+
+/* hash-link */
+
+/* .hash-link:focus,
+*:hover > .hash-link {
+  opacity: 0.25 !important;
+} */
+
+/* Sidebar */
+
+[class^="button button--secondary button--outline collapseSidebarButton_1CGd"] {
+  border-bottom: unset !important;
+}
+
+/* Navbar */
+
+.dropdown > .navbar__link:after {
+  border-radius: var(--ifm-global-radius);
+}
+
+/* CodeBlock */
+
+.codeBlockContainer_K1bP {
+  direction: rtl;
+}
+
+.codeBlockLines_39YC {
+  float: right !important;
+}
+
+.copyButton_Ue-o {
+  right: unset !important;
+  left: calc(var(--ifm-pre-padding) / 2) !important;
+
+  font-family: "Nunito Sans", "Iran Sans";
+  font-size: 0.6rem;
+}
+
+.tabs {
+  direction: rtl;
+  padding-left: unset;
+  padding-right: 0;
+}
+
+/* Avatar */
+
+.avatar__name {
+  font-family: "Nunito Sans", "Iran Sans";
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    font-size: 0.6rem;
+    /* padding: calc(var(--ifm-footer-padding-vertical) * 1 / 2); */
+    padding: calc(var(--ifm-footer-padding-vertical) * 1 / 3)
+    var(--ifm-footer-padding-horizontal);
+  }
+}
+
+/* Fonts */
+
+/* Iran Sans V5.5 Web - UltraLight */
+@font-face {
+  font-family: "Iran Sans";
+  font-style: normal;
+  font-weight: 100;
+  src: url("/fonts/IRANSans5.5/IRANSansWeb_UltraLight.eot"),
+    /* IE9 Compat Modes */
+  url("/fonts/IRANSans5.5/IRANSansWeb_UltraLight.eot?#iefix")
+  format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/IRANSans5.5/IRANSansWeb_UltraLight.woff2")
+  format("woff2"),
+    /* Super Modern Browsers */
+  url("/fonts/IRANSans5.5/IRANSansWeb_UltraLight.woff") format("woff"),
+    /* Modern Browsers */ url("/fonts/IRANSans5.5/IRANSansWeb_UltraLight.ttf")
+  format("truetype");
+}
+
+/* Iran Sans V5.5 Web - Light*/
+@font-face {
+  font-family: "Iran Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/IRANSans5.5/IRANSansWeb_Light.eot"),
+    /* IE9 Compat Modes */
+  url("/fonts/IRANSans5.5/IRANSansWeb_Light.eot?#iefix")
+  format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/IRANSans5.5/IRANSansWeb_Light.woff2")
+  format("woff2"),
+    /* Super Modern Browsers */ url("/fonts/IRANSans5.5/IRANSansWeb_Light.woff")
+  format("woff"),
+    /* Modern Browsers */ url("/fonts/IRANSans5.5/IRANSansWeb_Light.ttf")
+  format("truetype");
+}
+
+/* Iran Sans V5.5 Web*/
+@font-face {
+  font-family: "Iran Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/IRANSans5.5/IRANSansWeb.eot"),
+    /* IE9 Compat Modes */ url("/fonts/IRANSans5.5/IRANSansWeb.eot?#iefix")
+  format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/IRANSans5.5/IRANSansWeb.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/fonts/IRANSans5.5/IRANSansWeb.woff")
+  format("woff"),
+    /* Modern Browsers */ url("/fonts/IRANSans5.5/IRANSansWeb.ttf")
+  format("truetype");
+}
+
+/* nunito-sans- */
+/* latin */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc9yAs5tU1ECVZl_.woff2)
+  format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+  U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+  U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe0qMImSLYBIv1o4X1M8cce9I9tAcVwo.woff2)
+  format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+  U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+  U+FEFF, U+FFFD;
+}

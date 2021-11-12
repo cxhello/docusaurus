@@ -1,0 +1,99 @@
+# 自定义注解打印接口时长
+
+不知道大家有没有遇到过类似的诉求，就是希望在一个方法的入口处或者出口处做统一的日志处理，比如记录一下入参、出参、记录下方法执行的时间等。
+
+如果在每一个方法中自己写这样的代码的话，一方面会有很多代码重复，另外也容易被遗漏。
+
+这种场景，就可以使用自定义注解 + 切面实现这个功能。
+
+假设我们想要在一些 web 请求的方法上，记录下本次操作执行的时间，比如访问首页或登录接口等。
+
+首先我们自定义一个注解
+
+```java
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface ExecutionTime {
+
+    /**
+     * 方法描述
+     * @return
+     */
+    String methodDescription();
+
+}
+```
+
+有了上面的注解，接下来就可以写切面了。主要代码如下：
+
+```java
+@Aspect
+@Component
+public class ExecutionTimeAspect {
+
+    private static final Logger logger = LoggerFactory.getLogger(ExecutionTimeAspect.class);
+
+    @Around("@annotation(com.cxhello.example.annotion.ExecutionTime)")
+    public Object recordExecutionTime(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+        long startTime = System.currentTimeMillis();
+        Object result = proceedingJoinPoint.proceed();
+        long endTime = System.currentTimeMillis();
+        Method method = ((MethodSignature)proceedingJoinPoint.getSignature()).getMethod();
+        ExecutionTime annotation = method.getAnnotation(ExecutionTime.class);
+        logger.info(annotation.methodDescription() + "执行时长: {}", endTime - startTime);
+        return result;
+    }
+
+}
+```
+
+以上切面中，有几个点需要大家注意的：
+
+1. 使用 @Around 注解来指定对标注了 ExecutionTime 的方法设置切面；
+2. 方法执行完成后输出接口执行时长
+
+有了以上的切面及注解后，我们只需要在对应的方法上增加注解标注即可，如：
+
+```java
+@RestController
+public class IndexController {
+
+    @ExecutionTime(methodDescription = "首页接口")
+    @GetMapping("/index")
+    public String index(String name) throws InterruptedException {
+        Thread.sleep(1000);
+        StringBuilder stringBuilder = new StringBuilder("Hello ,");
+        stringBuilder.append(name);
+        return stringBuilder.toString();
+    }
+
+    @ExecutionTime(methodDescription = "登录接口")
+    @GetMapping("/login")
+    public String login(String userName, String password) throws InterruptedException {
+        Thread.sleep(2000);
+        String s = null;
+        if ("cxhello".equals(userName) && "123456".equals(password)) {
+            StringBuilder stringBuilder = new StringBuilder("Welcome ,");
+            s = stringBuilder.append(userName).toString();
+        } else {
+            s = "please log in first";
+        }
+        return s;
+    }
+
+}
+```
+
+![image-20201226221507996](https://cxhello.oss-cn-beijing.aliyuncs.com/image/image-20201226221507996.png)
+
+![image-20201226221523219](https://cxhello.oss-cn-beijing.aliyuncs.com/image/image-20201226221523219.png)
+
+总之，使用切面+自定义注解，我们可以统一做很多事情。除了以上的场景，我们还有很多相似的用法，比如：记录操作日志，打印接口入参出参、接口返回值加密等。
+
+代码其实都差不多，思路也比较简单，就是通过自定义注解来标注需要被切面处理的类或者方法，然后在切面中对方法的执行过程进行干预，比如在执行前或者执行后做一些特殊的操作。
+
+使用这种方式可以大大减少重复代码，大大提升代码的优雅性，方便我们使用。
+
+### 参考文章
+
+> https://www.hollischuang.com/archives/5742

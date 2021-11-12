@@ -1,0 +1,82 @@
+/* stylelint-disable docusaurus/copyright-header
+
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+/* var(--ifm-color-primary) */
+
+[class^="hero__title"] {
+  font-size: calc(var(--ifm-h1-font-size) * 5 / 4);
+}
+
+[class^="hero__subtitle"] {
+  font-size: 0.9rem;
+  padding-bottom: 2rem;
+}
+
+[class^="heroBanner"] {
+  padding: 2rem 0;
+  height: calc(100vh - var(--ifm-navbar-height) - 54px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+[class^="col col--4 col--offset-1"] {
+  margin-bottom: auto;
+  margin-top: 80px;
+}
+
+[class^="button button--outline button--primary button--lg"] {
+  background: #4042e2;
+  color: white;
+  border-style: none;
+  --ifm-button-size-multiplier: 1.2;
+}
+
+[class^="button button--outline button--primary button--lg"]:hover,
+[class^="button button--outline button--primary button--lg"]:active {
+  background: var(--ifm-color-primary-darkest);
+  border-color: var(--ifm-color-primary-darkest);
+}
+
+@media screen and (max-width: 996px) {
+  [class^="heroBanner"] {
+    height: auto;
+    padding: 0 2rem;
+  }
+
+  [class^="hero__subtitle"] {
+    text-align: center;
+  }
+
+  [class^="row"] {
+    text-align: center;
+  }
+
+  [class^="col col--4 col--offset-1"] {
+    margin: auto;
+  }
+
+  [class^="col"] {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  [class^="heroBanner"] {
+    padding: 0 1rem;
+  }
+
+  [class^="hero__subtitle"] {
+    padding-bottom: 1rem;
+  }
+
+  [class^="button button--outline button--primary button--lg"] {
+    --ifm-button-size-multiplier: 1;
+  }
+}
