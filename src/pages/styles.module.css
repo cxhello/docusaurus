@@ -43,17 +43,21 @@
   border-color: var(--ifm-color-primary-darkest);
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 966px) {
   [class^="heroBanner"] {
     height: auto;
     padding: 0 2rem;
+  }
+
+  [class^="hero__title"] {
+    text-align: center;
   }
 
   [class^="hero__subtitle"] {
     text-align: center;
   }
 
-  [class^="row"] {
+  [class^="start__button"] {
     text-align: center;
   }
 

@@ -66,9 +66,9 @@ body {
   font-size: 1.3rem !important;
 } */
 
-p {
+/*p {
   text-align: justify;
-}
+}*/
 
 img {
   border-radius: var(--ifm-global-radius);

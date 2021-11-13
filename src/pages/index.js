@@ -29,7 +29,7 @@ function HomepageHeader() {
         <div className="col col--4 col--offset-1">
           <h1 className="hero__title">Java Developer</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
+          <div className="start__button">
             <Link
               className={clsx(
                 'button button--outline button--primary button--lg',
