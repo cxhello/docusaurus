@@ -129,7 +129,7 @@ const config = {
         //     ],
         //   },
         // ],
-        copyright: `Copyright © ${new Date().getFullYear()} cxhello, Inc. Built with Docusaurus. <a style="color: #a4a4a4; text-decoration:none;" href="https://beian.miit.gov.cn/" target="_blank">蒙ICP备17005703号</a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} cxhello, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
