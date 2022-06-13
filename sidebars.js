@@ -61,7 +61,8 @@ const sidebars = {
           'Elasticsearch安装与配置',
           'Logstash安装与导入数据',
           'Kibana的安装与界面快速浏览',
-          'Jenkins安装与配置'
+          'Jenkins安装与配置',
+          'K8s部署Dashboard'
       ]
     },
     {
