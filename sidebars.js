@@ -35,44 +35,11 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Windows 环境安装',
-      items: [
-          '虚拟机安装CentOS7',
-          'Windows-MySQL安装与配置',
-          'Windows-Gradle安装与配置',
-          'Windows-Node.js安装与配置'
-     ]
-    },
-    {
-      type: 'category',
-      label: 'Linux 环境安装',
-      items: [
-          'yum源配置',
-          'Java安装与配置',
-          'MySQL安装与配置',
-          'Redis安装与配置',
-          'Git安装与配置',
-          'Maven安装与配置',
-          'Nginx安装与配置',
-          'Docker安装与配置',
-          'Node.js安装与配置',
-          'Zookeeper安装与配置',
-          'Kafka安装与配置',
-          'Elasticsearch安装与配置',
-          'Logstash安装与导入数据',
-          'Kibana的安装与界面快速浏览',
-          'Jenkins安装与配置',
-          'K8s部署Dashboard'
-      ]
-    },
-    {
-      type: 'category',
-      label: '后端知识',
+      label: '后端',
       items: [
           'Java基础',
           '单例模式',
           'Spring Boot',
-          'Linux常用命令',
           'Git常用命令',
           'GitHub搜索',
           'MySQL索引',
@@ -90,21 +57,49 @@ const sidebars = {
           'byte',
           'SpringBoot应用接入Graylog',
           'Filter过滤器',
+          'Logback日志增加链路追踪'
       ]
     },
     {
       type: 'category',
-      label: '前端知识',
+      label: '前端',
       items: [
           'Vue发送请求下载文件'
       ]
     },
     {
       type: 'category',
-      label: '电脑常见问题',
+      label: '运维',
       items: [
-          '窗口移到屏幕边上拉不出来'
+          'Linux常用命令',
+          'yum源配置',
+          'Java安装与配置',
+          'MySQL安装与配置',
+          'Redis安装与配置',
+          'Git安装与配置',
+          'Maven安装与配置',
+          'Nginx安装与配置',
+          'Docker安装与配置',
+          'Node.js安装与配置',
+          'Zookeeper安装与配置',
+          'Kafka安装与配置',
+          'Elasticsearch安装与配置',
+          'Logstash安装与导入数据',
+          'Kibana的安装与界面快速浏览',
+          'Jenkins安装与配置',
+          'K8s部署Dashboard'
       ]
+    },    
+    {
+      type: 'category',
+      label: '杂文',
+      items: [
+          '虚拟机安装CentOS7',
+          'Windows-MySQL安装与配置',
+          'Windows-Gradle安装与配置',
+          'Windows-Node.js安装与配置',
+          '窗口移到屏幕边上拉不出来'
+     ]
     }
   ]
 };
