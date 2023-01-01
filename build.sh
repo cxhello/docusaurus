@@ -1,0 +1,1 @@
+GIT_USER=cxhello GIT_PASS=your_personal_token yarn deploy
