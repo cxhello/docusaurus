@@ -128,7 +128,7 @@ const config = {
         //       },
         //     ],
         //   },
-        // ],
+        // ], 
         copyright: `Copyright © ${new Date().getFullYear()} cxhello, Inc. Built with Docusaurus.`,
       },
       prism: {
