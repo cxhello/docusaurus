@@ -72,6 +72,7 @@ const sidebars = {
       label: '运维',
       items: [
           'Linux常用命令',
+          '逻辑卷管理器-LVM',          
           'yum源配置',
           'Java安装与配置',
           'MySQL安装与配置',
