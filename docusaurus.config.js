@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'cxhello - Java Developer',
   tagline: '记录工作，记录生活',
-  url: 'https://cxhello.github.io/docusaurus',
-  baseUrl: '/',
+  url: 'https://cxhello.github.io',
+  baseUrl: '/docusaurus',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/Website.svg',
@@ -45,23 +45,28 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      hideableSidebar: true,
+      // hideableSidebar: true,
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
         respectPrefersColorScheme: true,
-        switchConfig: {
-          darkIcon: '🌙',
-          lightIcon: '\u2600',
-          // React inline style object
-          // see https://reactjs.org/docs/dom-elements.html#style
-          darkIconStyle: {
-            marginLeft: '2px',
-          },
-          lightIconStyle: {
-            marginLeft: '1px',
-          },
-        },
+        // switchConfig: {
+        //   darkIcon: '🌙',
+        //   lightIcon: '\u2600',
+        //   // React inline style object
+        //   // see https://reactjs.org/docs/dom-elements.html#style
+        //   darkIconStyle: {
+        //     marginLeft: '2px',
+        //   },
+        //   lightIconStyle: {
+        //     marginLeft: '1px',
+        //   },
+        // },
+      },
+      docs: {
+        sidebar: {
+          hideable: true
+        }
       },
       navbar: {
         title: 'cxhello',
