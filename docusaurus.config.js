@@ -9,7 +9,7 @@ const config = {
   title: 'cxhello - Java Developer',
   tagline: '记录工作，记录生活',
   url: 'https://cxhello.github.io',
-  baseUrl: '/docusaurus',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/Website.svg',
